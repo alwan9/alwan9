@@ -1,0 +1,106 @@
+#!/usr/bin/env python3
+"""
+make_info_card.py
+Generates an animated neofetch-style SVG card for Hafiz Alwan Susilo's GitHub Profile README.
+"""
+
+import os
+
+SVG_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;display=swap');
+      
+      .bg {{ fill: #0d1117; stroke: #30363d; stroke-width: 1.5; rx: 10px; }}
+      .header-bar {{ fill: #161b22; rx: 10px 10px 0 0; }}
+      .btn-close {{ fill: #ff5f56; }}
+      .btn-min {{ fill: #ffbd2e; }}
+      .btn-max {{ fill: #27c93f; }}
+      .header-title {{ font-family: 'Fira Code', Consolas, monospace; font-size: 11px; fill: #8b949e; font-weight: 600; }}
+      
+      .code-font {{
+        font-family: 'Fira Code', Consolas, monospace;
+        font-size: 11.5px;
+        white-space: pre;
+      }}
+
+      .user-host {{ font-weight: 700; fill: #58a6ff; }}
+      .separator {{ fill: #30363d; }}
+      .key {{ fill: #79c0ff; font-weight: 600; }}
+      .value {{ fill: #c9d1d9; }}
+      .accent {{ fill: #3fb950; font-weight: 600; }}
+      
+      .line {{ opacity: 0; animation: slideFade 0.35s ease-out forwards; }}
+      .l1 {{ animation-delay: 0.1s; }}
+      .l2 {{ animation-delay: 0.2s; }}
+      .l3 {{ animation-delay: 0.3s; }}
+      .l4 {{ animation-delay: 0.4s; }}
+      .l5 {{ animation-delay: 0.5s; }}
+      .l6 {{ animation-delay: 0.6s; }}
+      .l7 {{ animation-delay: 0.7s; }}
+      .l8 {{ animation-delay: 0.8s; }}
+      .l9 {{ animation-delay: 0.9s; }}
+      .l10 {{ animation-delay: 1.0s; }}
+      .l11 {{ animation-delay: 1.1s; }}
+      .l12 {{ animation-delay: 1.2s; }}
+
+      @keyframes slideFade {{
+        from {{ opacity: 0; transform: translateY(6px); }}
+        to {{ opacity: 1; transform: translateY(0); }}
+      }}
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="458" height="298" class="bg" />
+  <path d="M 1 11 A 10 10 0 0 1 11 1 L 449 1 A 10 10 0 0 1 459 11 L 459 32 L 1 32 Z" class="header-bar" />
+  <circle cx="16" cy="16.5" r="5" class="btn-close" />
+  <circle cx="32" cy="16.5" r="5" class="btn-min" />
+  <circle cx="48" cy="16.5" r="5" class="btn-max" />
+  <text x="230" y="20" text-anchor="middle" class="header-title">alwan@terminal ~ neofetch</text>
+  <line x1="1" y1="32" x2="459" y2="32" stroke="#30363d" stroke-width="1" />
+
+  <g transform="translate(20, 44)" class="code-font">
+    <text y="14" class="line l1"><tspan class="user-host">hafizalwan</tspan><tspan class="value">@</tspan><tspan class="user-host">github-profile</tspan></text>
+    <text y="24" class="line l2"><tspan class="separator">----------------------------------------</tspan></text>
+    <text y="42" class="line l3"><tspan class="key">Name</tspan><tspan class="value">: Hafiz Alwan Susilo</tspan></text>
+    <text y="59" class="line l4"><tspan class="key">Role</tspan><tspan class="value">: Front-End &amp; Full-Stack Developer</tspan></text>
+    <text y="76" class="line l5"><tspan class="key">Projects</tspan><tspan class="value">: E-Commerce, Cashier App, Landing Page</tspan></text>
+    <text y="93" class="line l6"><tspan class="key">Stack</tspan><tspan class="value">: Laravel, PHP, JS, HTML5, CSS3, MySQL</tspan></text>
+    <text y="110" class="line l7"><tspan class="key">UI/UX Tool</tspan><tspan class="value">: Figma, Photoshop, Illustrator</tspan></text>
+    <text y="127" class="line l8"><tspan class="key">Current</tspan><tspan class="value">: BajuBagus Inc E-Commerce Web</tspan></text>
+    <text y="144" class="line l9"><tspan class="key">Portfolio</tspan><tspan class="value">: alwan9.github.io/personal/</tspan></text>
+    <text y="161" class="line l10"><tspan class="key">Contact</tspan><tspan class="value">: hafizsusilo86@gmail.com</tspan></text>
+    <text y="178" class="line l11"><tspan class="key">Status</tspan><tspan class="value">: </tspan><tspan class="accent">🟢 Available for Work &amp; Collaboration</tspan></text>
+    <text y="196" class="line l12"><tspan class="separator">----------------------------------------</tspan></text>
+
+    <g transform="translate(0, 208)" class="line l12">
+      <rect x="0" y="0" width="22" height="12" fill="#484f58" rx="2" />
+      <rect x="26" y="0" width="22" height="12" fill="#ff7b72" rx="2" />
+      <rect x="52" y="0" width="22" height="12" fill="#3fb950" rx="2" />
+      <rect x="78" y="0" width="22" height="12" fill="#d29922" rx="2" />
+      <rect x="104" y="0" width="22" height="12" fill="#58a6ff" rx="2" />
+      <rect x="130" y="0" width="22" height="12" fill="#bc8cff" rx="2" />
+      <rect x="156" y="0" width="22" height="12" fill="#39c5cf" rx="2" />
+      <rect x="182" y="0" width="22" height="12" fill="#b1bac4" rx="2" />
+
+      <rect x="0" y="16" width="22" height="12" fill="#6e7681" rx="2" />
+      <rect x="26" y="16" width="22" height="12" fill="#ffa198" rx="2" />
+      <rect x="52" y="16" width="22" height="12" fill="#56d364" rx="2" />
+      <rect x="78" y="16" width="22" height="12" fill="#e3b341" rx="2" />
+      <rect x="104" y="16" width="22" height="12" fill="#79c0ff" rx="2" />
+      <rect x="130" y="16" width="22" height="12" fill="#d2a8ff" rx="2" />
+      <rect x="156" y="16" width="22" height="12" fill="#56d4dd" rx="2" />
+      <rect x="182" y="16" width="22" height="12" fill="#f0f6fc" rx="2" />
+    </g>
+  </g>
+</svg>
+"""
+
+def generate_svg(out_path):
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, 'w', encoding='utf-8') as f:
+        f.write(SVG_TEMPLATE)
+    print(f"Generated info card SVG at: {out_path}")
+
+if __name__ == '__main__':
+    generate_svg('assets/info-card.svg')

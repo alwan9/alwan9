@@ -96,16 +96,16 @@
 <h3><code>alwan9@github ~ $ ./stats.sh</code></h3>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=alwan9&theme=dark&background=0d1117&ring=3fb950&fire=3fb950&currStreakNum=58a6ff&sideNums=c9d1d9&sideLabels=8b949e&dates=8b949e&hide_border=true" width="420" alt="GitHub Streak Stats (Animated)" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=alwan9&theme=dark" width="420" alt="GitHub Streak Stats" />
 </p>
 
 <table>
   <tr>
     <td valign="top" align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=alwan9&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=3fb950&text_color=c9d1d9" width="410" alt="GitHub Stats" />
+      <img src="https://github-readme-stats.vercel.app/api?username=alwan9&show_icons=true&theme=dark" width="410" alt="GitHub Stats" />
     </td>
     <td valign="top" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=alwan9&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" width="410" alt="Top Languages" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=alwan9&layout=compact&theme=dark" width="410" alt="Top Languages" />
     </td>
   </tr>
 </table>
