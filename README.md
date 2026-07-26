@@ -7,16 +7,16 @@
 
 <br>
 
-<!-- SECTION 1: WHOAMI & NEOFETCH CARD -->
+<!-- ANIMATION 1: WHOAMI & NEOFETCH CARD -->
 <h3><code>alwan9@github ~ $ whoami</code></h3>
 
 <table>
   <tr>
     <td valign="top" align="center">
-      <img src="./assets/alwan-ascii.svg" width="410" alt="Hafiz Alwan ASCII Banner" />
+      <img src="./assets/alwan-ascii.svg" width="410" alt="Hafiz Alwan ASCII Banner (Animated)" />
     </td>
     <td valign="top" align="center">
-      <img src="./assets/info-card.svg" width="450" alt="Hafiz Alwan Neofetch Card" />
+      <img src="./assets/info-card.svg" width="450" alt="Hafiz Alwan Neofetch Card (Animated)" />
     </td>
   </tr>
 </table>
@@ -45,10 +45,17 @@
 
 <br><br>
 
-<!-- SECTION 3: CONTRIBUTION HEATMAP -->
+<!-- ANIMATION 2: CONTRIBUTION HEATMAP -->
 <h3><code>alwan9@github ~ $ ./contributions.sh</code></h3>
 
-<img src="./assets/contrib-heatmap.svg" width="870" alt="alwan9 Contribution Heatmap" />
+<img src="./assets/contrib-heatmap.svg" width="870" alt="alwan9 Contribution Heatmap (Animated)" />
+
+<br><br>
+
+<!-- ANIMATION 3: GITHUB CONTRIBUTION SNAKE GAME -->
+<h3><code>alwan9@github ~ $ ./snake-game.sh</code></h3>
+
+<img src="https://raw.githubusercontent.com/alwan9/alwan9/output/github-contribution-grid-snake-dark.svg" width="870" alt="Contribution Snake Animation" />
 
 <br><br>
 
@@ -85,8 +92,12 @@
 
 <br><br>
 
-<!-- SECTION 5: GITHUB STATS & METRICS -->
+<!-- ANIMATION 4: GITHUB STREAK & STATS METRICS -->
 <h3><code>alwan9@github ~ $ ./stats.sh</code></h3>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=alwan9&theme=dark&background=0d1117&ring=3fb950&fire=3fb950&currStreakNum=58a6ff&sideNums=c9d1d9&sideLabels=8b949e&dates=8b949e&hide_border=true" width="420" alt="GitHub Streak Stats (Animated)" />
+</p>
 
 <table>
   <tr>
