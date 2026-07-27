@@ -52,12 +52,7 @@
 
 <br><br>
 
-<!-- ANIMATION 3: GITHUB CONTRIBUTION SNAKE GAME -->
-<h3><code>alwan9@github ~ $ ./snake-game.sh</code></h3>
-
-<img src="https://raw.githubusercontent.com/alwan9/alwan9/output/github-contribution-grid-snake-dark.svg" width="870" alt="Contribution Snake Animation" />
-
-<br><br>
+ 
 
 <!-- SECTION 4: LANGUAGES AND TOOLS -->
 <h3><code>alwan9@github ~ $ cat stack.json</code></h3>
@@ -91,26 +86,7 @@
 </p>
 
 <br><br>
-
-<!-- ANIMATION 4: GITHUB STREAK & STATS METRICS -->
-<h3><code>alwan9@github ~ $ ./stats.sh</code></h3>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=alwan9&theme=dark" width="420" alt="GitHub Streak Stats" />
-</p>
-
-<table>
-  <tr>
-    <td valign="top" align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=alwan9&show_icons=true&theme=dark" width="410" alt="GitHub Stats" />
-    </td>
-    <td valign="top" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=alwan9&layout=compact&theme=dark" width="410" alt="Top Languages" />
-    </td>
-  </tr>
-</table>
-
-<br><br>
+ 
 
 <!-- SECTION 6: CONNECT & SOCIAL CTA -->
 <h3><code>alwan9@github ~ $ ./connect.sh</code></h3>
